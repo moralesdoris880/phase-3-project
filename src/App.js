@@ -6,9 +6,8 @@ import Login from './Login'
 function App() {
   return (
     <div className="App">
-      <h1>My Daily Planner</h1>
       <Routes>
-      <Route path="/" exact element={<Login />}>
+      <Route path="/" exact element={<Home />}>
       </Route>
       </Routes>
     </div>
@@ -16,3 +15,12 @@ function App() {
 }
 
 export default App;
+
+/* File Structure
+
+App > 
+  Home > 
+    Login (if login true update state that allows custom stuff)
+
+
+*/
