@@ -1,13 +1,12 @@
-import React, {useState}from 'react';
+import React from 'react';
 import Login from './Login';
 
-function Home(){
-    const[loggedin,setLoggedIn]=useState(false);
+function Home(){  
     return (
         <div>
             <h1>My Daily Planner</h1>
             <div>
-                <Login loggedin={loggedin}/>
+            <Login />
             </div>
         </div>
     )
