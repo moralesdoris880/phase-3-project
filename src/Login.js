@@ -7,7 +7,7 @@ function Login(){
     const[usernames,setUsernames]=useState([]);
     const[display,setDisplay]=useState("inline");
     const[displaytodo,setDisplayTodo]=useState("none");
-    const[userId,setUserId]=useState("");
+    const[userId,setUserId]=useState(1);
 
     useEffect (()=>{
         fetch(`http://localhost:9292/users`)
@@ -31,7 +31,6 @@ function Login(){
         }
         else{
             console.log("Please Try Again")
-            console.log(username)
         }
     }
            
@@ -66,10 +65,4 @@ function Login(){
 
 export default Login;
 
-/* 
- console.log(user)
-        localStorage.setItem('loggedin','true')
-        localStorage.getItem('loggedin')
-       
-            }
-*/
+/* Implement handleSubmit so it can stop the looping thru array */
