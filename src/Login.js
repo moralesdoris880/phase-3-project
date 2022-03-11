@@ -2,8 +2,8 @@ import React,{useState,useEffect} from "react";
 import Todo from "./Todo";
 
 function Login(){
-    const[password,setPassword]=useState("");
-    const[username,setUsername]=useState("");
+    const[password,setPassword]=useState("coolapple1234");
+    const[username,setUsername]=useState("bloodinia");
     const[usernames,setUsernames]=useState([]);
     const[display,setDisplay]=useState("inline");
     const[displaytodo,setDisplayTodo]=useState("none");
@@ -26,11 +26,10 @@ function Login(){
             localStorage.setItem('loggedin','true')
             setDisplay("none");
             setDisplayTodo("inline");
-            setUserId(user.id);
-            
+            setUserId(user.id); 
         }
         else{
-            console.log("Please Try Again")
+            console.log("Please Try Again");
         }
     }
            
@@ -50,14 +49,14 @@ function Login(){
         <div>
             <form id="loginform" onSubmit={handleSubmit} style={{ display: display}}>
                     <label>Username</label><br/>
-                    <input type="text" id="username" name="username"required onChange={handleUsername}></input><br/>
+                    <input type="text" id="username" name="username"required onChange={handleUsername} value={username}></input><br/>
                     <label>Password</label><br/>
-                    <input type="text" id="password" name="password" required onChange={handlePassword}></input><br/>
+                    <input type="text" id="password" name="password" required onChange={handlePassword} value={password}></input><br/>
                     <input type="submit" value="Login"></input>
             </form>
             <div id="todolist" style={{display:displaytodo}} >
                 <Todo username={username} userId={userId}/>
-            </div>
+            </div> 
 
         </div>
     )
