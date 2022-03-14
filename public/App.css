@@ -1,0 +1,76 @@
+html,main,body{
+  margin: 0;
+  display: flex;
+  background-color: #fff; 
+  background-image: 
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
+}
+#title{
+  padding-left: 100px;
+  padding-top: 2px;
+  font-size: 36px;
+  font-family: 'Nothing You Could Do', cursive;
+}
+#Home{
+  width: 500px;
+  height: 400px;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #ffffba;
+}
+li{
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+  list-style-type: none;
+  font-size: 24px;
+  color:#676767;
+  width: 360px;
+}
+#login{
+  padding: 20px;
+  min-height: 400px;
+}
+#todoTitle{
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+}
+#loginTitle{
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  margin: 0;
+  padding-bottom: 10px;
+  font-size: 36px;
+}
+#top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#createBtn{
+  border: none;
+  width: 50px;
+  font-size: 36px;
+  font-weight: normal;
+  background-color: #ffffba;
+}
+.todo{
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.material-icons{
+  color:#8d8d8d;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+

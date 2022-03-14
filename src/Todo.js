@@ -43,7 +43,7 @@ function Todo ({username,userId}) {
         e.preventDefault();
         fetch(`http://localhost:9292/todos/${id}`,{method: 'DELETE'})
         .then(response => response.json())
-        .then(data =>handleFilter(data))  
+        .then(data =>handleFilter(data))
     }
 
     function handleFilter(data){
@@ -75,24 +75,23 @@ function Todo ({username,userId}) {
 
     return(
         <div>
-            <h1>Hello, {username}!</h1>
-            <div>
-            <h1>To Do List</h1>
-            <button onClick={handleCreateBtn}>+</button>
+            <div id="top">
+            <h1 id="todoTitle">To Do</h1>
+            <button id="createBtn" onClick={handleCreateBtn}>+</button>
             </div>
             <form style={{ display: display2? "inline":"none"}} onSubmit={handleNewTodo}>
                 <input type="text" id="titleEdit" name="titleEdit" required onChange={handleTitle} ></input><br/>
                 <input type="submit" value="Create"></input>
             </form>
-            <div>
+            <div id="todoContainer">
                 {todos.length?todos.map(todo => <div className="todo" key={`todo-${todo.id}`}>
+                    <i className="material-icons" onClick={(e)=>handleRemove(e,todo.id)}>check_box_outline_blank</i>
                     <li>{todo.title}</li>
                     <form id={todo.id}style={{ display: "none"}}>
                         <input type="text" id="titleEdit" name="titleEdit" onChange={handleTitle}></input><br/>
                         <input type="submit" value="Done" onClick={(e)=>handlePatch(e,todo.id)}></input>
                     </form>
-                    <button className="editBtn" onClick={handleEdit}>Edit</button>
-                    <button className="remBtn" onClick={(e)=>handleRemove(e,todo.id)}>Remove</button>
+                    <i className="material-icons" onClick={handleEdit}>edit</i>
                     </div>).reverse()
                 :"Loading..."}
             </div>
